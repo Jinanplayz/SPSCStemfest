@@ -1,0 +1,101 @@
+/* ============================================================
+   STEM FEST — mobile.css
+   Phone layout and bottom dock. Linked with media="(max-width: 899px)".
+   ============================================================ */
+
+.shell{max-width:100%;margin:0 auto;padding:0 20px}
+body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+
+.topbar{
+  position:sticky;top:0;z-index:80;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.topbar .shell{display:flex;align-items:center;min-height:60px;gap:12px}
+.brand{font-size:19px;margin-right:auto}
+.deck{display:none}
+.topbar-cta{padding:10px 18px;min-height:42px;font-size:14px}
+
+.hero{padding:52px 0 50px}
+.hero-grid{background-size:46px 46px}
+.hero-title{font-size:clamp(54px,16vw,88px);margin-top:18px}
+.hero-lede{font-size:17.5px;margin-top:18px}
+.hero-actions{margin-top:28px;gap:10px}
+.hero-actions .btn{flex:1 1 100%}
+
+.pillrow{gap:10px;margin-top:34px}
+.pill{flex:1 1 calc(50% - 5px);padding:12px 16px;min-width:0}
+.pill-v{font-size:17px}
+
+.ticker-track{font-size:14px;gap:20px;animation-duration:28s}
+
+.block{padding:52px 0}
+.h1-alt{font-size:clamp(34px,9.5vw,48px);margin:12px 0 18px}
+.h2{font-size:clamp(27px,7.5vw,36px)}
+.lede{font-size:17px}
+
+.head{flex-direction:column;align-items:flex-start;gap:18px}
+.head .btn{width:100%}
+
+.cards{grid-template-columns:1fr;gap:18px;margin-top:28px}
+.card-media{aspect-ratio:2/1}
+.card-sym{font-size:50px}
+.card-body{padding:20px}
+.card-title{font-size:21px}
+
+.steps li{gap:16px;padding:20px 0}
+.steps h3{font-size:19px}
+
+.cta-slab{padding:28px 22px;flex-direction:column;align-items:flex-start;gap:22px}
+.cta-slab .btn{width:100%}
+
+.people{grid-template-columns:1fr}
+.person{padding:24px 20px}
+
+.row{padding:16px 18px;gap:13px;flex-wrap:wrap}
+.board-head{font-size:13px;padding:14px 18px}
+
+details summary{font-size:18px;padding:19px 0}
+
+.btn.wide{width:100%;margin-top:30px}
+
+.foot{padding:46px 0 38px}
+.foot-brand{font-size:27px;margin-bottom:26px}
+.foot-cols{gap:38px;margin-bottom:28px}
+.foot-legal{padding-top:24px;border-top:1px solid var(--line)}
+
+/* ---- bottom dock ---- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  display:flex;
+  background:var(--bg);
+  border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.dock-link{
+  flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;min-height:68px;padding:9px 2px 11px;
+  font-size:11px;font-weight:600;letter-spacing:.02em;
+  color:var(--muted);transition:color .16s;
+  -webkit-tap-highlight-color:transparent;position:relative;
+}
+.dock-link[aria-selected="true"]{color:var(--accent)}
+.dock-link[aria-selected="true"]::before{
+  content:"";position:absolute;top:0;left:24%;right:24%;
+  height:2px;background:var(--accent);border-radius:0 0 2px 2px;
+}
+.dock-link:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.dock-ico{width:18px;height:18px;display:block;border:1.8px solid currentColor;border-radius:4px}
+.i-events{border-radius:50%}
+.i-reg{background:currentColor}
+.i-team{border-radius:9px 9px 4px 4px}
+.i-win{transform:rotate(45deg)}
+.i-about{border-radius:50%;border-style:dashed}
+.dock-key[aria-selected="false"] .dock-ico{background:var(--accent);border-color:var(--accent)}
+.dock-key[aria-selected="false"]{color:var(--text)}
+
+@media (max-width:359px){
+  .dock-link{font-size:10px}
+  .dock-ico{width:16px;height:16px}
+}

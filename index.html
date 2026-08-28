@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#080809">
+<meta name="theme-color" content="#16181D">
 <title>STEM FEST — School Science Festival</title>
-<meta name="description" content="One day, six events. Olympiads, project builds and a gaming bracket for classes 6 to 12. Entry Tk 500 per event.">
+<meta name="description" content="One day, six events. Olympiads, project builds and a gaming bracket for classes 6 to 12.">
 
 <meta property="og:title" content="STEM FEST">
-<meta property="og:description" content="Six events. Classes 6 to 12. Entry Tk 500 per event.">
+<meta property="og:description" content="Six events. Classes 6 to 12. Register now.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-<!-- shared -->
+<!-- shared: themes, type, components -->
 <link rel="stylesheet" href="css/base.css">
 <!-- PC version -->
 <link rel="stylesheet" href="css/desktop.css" media="(min-width: 900px)">
@@ -43,6 +43,11 @@
       <button class="deck-link" role="tab" aria-selected="false" data-panel="about">About</button>
     </nav>
 
+    <button class="themer" id="themeBtn" type="button" aria-label="Switch colour theme">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.4M12 19.4v2.4M4.2 12H1.8M22.2 12h-2.4M6.5 6.5 4.8 4.8M19.2 19.2l-1.7-1.7M17.5 6.5l1.7-1.7M4.8 19.2l1.7-1.7" stroke-linecap="round"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2z" stroke-linejoin="round"/></svg>
+    </button>
+
     <button class="btn btn-ghost topbar-cta" data-goto="register">Register</button>
   </div>
 </header>
@@ -60,15 +65,15 @@
       <p class="hero-lede">One day. Six events. Olympiads, project builds and a gaming bracket, run by students for students.</p>
 
       <div class="hero-actions">
-        <button class="btn btn-solid" data-goto="register">Register now</button>
-        <button class="btn btn-ghost" data-goto="events">See the events</button>
+        <button class="btn btn-solid" data-goto="register">Register now <span class="arw">→</span></button>
+        <button class="btn btn-ghost" data-goto="events">See all events</button>
       </div>
 
       <ul class="pillrow">
         <li class="pill"><span class="pill-k">Date</span><span class="pill-v">[DATE TBC]</span></li>
         <li class="pill"><span class="pill-k">Venue</span><span class="pill-v">[VENUE TBC]</span></li>
-        <li class="pill"><span class="pill-k">Entry</span><span class="pill-v">Tk 500</span></li>
-        <li class="pill"><span class="pill-k">Events</span><span class="pill-v">06</span></li>
+        <li class="pill"><span class="pill-k">Classes</span><span class="pill-v">6 to 12</span></li>
+        <li class="pill"><span class="pill-k">Events</span><span class="pill-v">Six</span></li>
       </ul>
     </div>
   </div>
@@ -81,53 +86,11 @@
   </div>
 
   <div class="shell block">
-    <div class="head">
-      <div>
-        <p class="eyebrow">Line up</p>
-        <h2 class="h2">FEATURED EVENTS</h2>
-      </div>
-      <button class="btn btn-ghost" data-goto="events">Explore all six</button>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="card-media m-mp">
-          <span class="badge">Tk 500</span>
-          <span class="card-sym">MP</span>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">MATHS + PHYSICS</h3>
-          <p>A combined written paper sat under exam conditions. Separate papers are set for each grade band and marked against that cohort only.</p>
-          <div class="card-stats">
-            <span><b>9–10</b> band</span>
-            <span><b>11–12</b> band</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-media m-cb">
-          <span class="badge">Tk 500</span>
-          <span class="card-sym">CB</span>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">CHEMISTRY + BIOLOGY</h3>
-          <p>One paper covering both subjects, split into two grade bands with separate question sets and separate rankings.</p>
-          <div class="card-stats">
-            <span><b>9–10</b> band</span>
-            <span><b>11–12</b> band</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="shell block">
     <p class="eyebrow">How it runs</p>
-    <h2 class="h2">THREE STEPS</h2>
+    <h2 class="h2">Three steps</h2>
     <ol class="steps">
-      <li><span class="step-n">01</span><div><h3>Choose your events</h3><p>The form only shows what your grade can enter, so you cannot sign up for the wrong paper by accident.</p></div></li>
-      <li><span class="step-n">02</span><div><h3>Pay and confirm</h3><p>Your total is calculated live on the form, discount included, before you submit anything.</p></div></li>
+      <li><span class="step-n">01</span><div><h3>Choose your events</h3><p>The registration form only shows what your class can enter, so you cannot sign up for the wrong event by accident.</p></div></li>
+      <li><span class="step-n">02</span><div><h3>Confirm your entry</h3><p>Everything you need is shown on the form before you submit. Your confirmation arrives by email.</p></div></li>
       <li><span class="step-n">03</span><div><h3>Turn up ready</h3><p>Bring your school ID and your own instruments. Everything else is provided on the day.</p></div></li>
     </ol>
   </div>
@@ -136,10 +99,10 @@
     <div class="cta-slab">
       <div>
         <p class="eyebrow">Entries open</p>
-        <h2 class="h2">READY TO COMPETE?</h2>
-        <p class="slab-lede">Enter one event or all six. The more you enter, the less each one costs.</p>
+        <h2 class="h2">Ready to compete?</h2>
+        <p class="slab-lede">Six events across olympiads, project builds and gaming. Enter one or enter several.</p>
       </div>
-      <button class="btn btn-solid" data-goto="register">Register now</button>
+      <button class="btn btn-solid" data-goto="register">Register now <span class="arw">→</span></button>
     </div>
   </div>
 </section>
@@ -147,90 +110,78 @@
 <!-- ============ EVENTS ============ -->
 <section id="events" class="view" role="tabpanel" hidden>
   <div class="shell block">
-    <p class="eyebrow">Six events <i>/</i> Tk 500 each</p>
-    <h2 class="h1-alt">WHAT YOU CAN ENTER</h2>
-    <p class="lede">Olympiads are split by grade band. Projects Display runs two divisions. The gaming bracket is open to every age group.</p>
+    <p class="eyebrow">The line up</p>
+    <h2 class="h1-alt">What you can enter</h2>
+    <p class="lede">Olympiads run in separate class bands. Projects Display runs two divisions. The gaming bracket is open to every age group.</p>
 
-    <div class="cards cards-3">
+    <div class="cards">
       <article class="card">
-        <div class="card-media m-mp"><span class="badge">Tk 500</span><span class="card-sym">MP</span><span class="card-no">01</span></div>
+        <div class="card-media m-mp"><span class="badge">Olympiad</span><span class="card-sym">MP</span><span class="card-no">01</span></div>
         <div class="card-body">
-          <h3 class="card-title">MATHS + PHYSICS</h3>
-          <p>Combined written paper, two grade bands, separate papers and rankings.</p>
-          <div class="card-stats"><span><b>9–10</b></span><span><b>11–12</b></span></div>
+          <h3 class="card-title">Maths + Physics</h3>
+          <p>A combined written olympiad sat under exam conditions, with each class band ranked against its own group.</p>
+          <div class="card-stats"><span><b>Class 9–10</b></span><span><b>Class 11–12</b></span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-media m-cb"><span class="badge">Tk 500</span><span class="card-sym">CB</span><span class="card-no">02</span></div>
+        <div class="card-media m-cb"><span class="badge">Olympiad</span><span class="card-sym">CB</span><span class="card-no">02</span></div>
         <div class="card-body">
-          <h3 class="card-title">CHEMISTRY + BIOLOGY</h3>
-          <p>Both subjects in one paper, banded and ranked separately.</p>
-          <div class="card-stats"><span><b>9–10</b></span><span><b>11–12</b></span></div>
+          <h3 class="card-title">Chemistry + Biology</h3>
+          <p>Both subjects in one written olympiad, split into two class bands and ranked separately.</p>
+          <div class="card-stats"><span><b>Class 9–10</b></span><span><b>Class 11–12</b></span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-media m-cs"><span class="badge">Tk 500</span><span class="card-sym">CS</span><span class="card-no">03</span></div>
+        <div class="card-media m-cs"><span class="badge">Olympiad</span><span class="card-sym">CS</span><span class="card-no">03</span></div>
         <div class="card-body">
-          <h3 class="card-title">COMBINED SCIENCE</h3>
-          <p>Physics, chemistry and biology at junior level. No specialisation needed.</p>
-          <div class="card-stats"><span><b>6–8</b></span></div>
+          <h3 class="card-title">Combined Science</h3>
+          <p>Physics, chemistry and biology together at junior level. No specialisation needed to take part.</p>
+          <div class="card-stats"><span><b>Class 6–8</b></span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-media m-ma"><span class="badge">Tk 500</span><span class="card-sym">Ma</span><span class="card-no">04</span></div>
+        <div class="card-media m-ma"><span class="badge">Olympiad</span><span class="card-sym">Ma</span><span class="card-no">04</span></div>
         <div class="card-body">
-          <h3 class="card-title">MATHS OLYMPIAD</h3>
-          <p>Pure problem solving for the junior band. Nothing that computes for you.</p>
-          <div class="card-stats"><span><b>6–8</b></span></div>
+          <h3 class="card-title">Maths Olympiad</h3>
+          <p>Pure problem solving for the junior band. Bring a pencil and nothing that computes for you.</p>
+          <div class="card-stats"><span><b>Class 6–8</b></span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-media m-pd"><span class="badge">Tk 500</span><span class="card-sym">Pd</span><span class="card-no">05</span></div>
+        <div class="card-media m-pd"><span class="badge">Showcase</span><span class="card-sym">Pd</span><span class="card-no">05</span></div>
         <div class="card-body">
-          <h3 class="card-title">PROJECTS DISPLAY</h3>
-          <p>Build it, bring it, defend it at the table. Judged live in two divisions.</p>
-          <div class="card-stats"><span><b>6–8</b></span><span><b>9–12</b></span></div>
+          <h3 class="card-title">Projects Display</h3>
+          <p>Build it, bring it, defend it at the table. Judged live on the day across two divisions.</p>
+          <div class="card-stats"><span><b>Class 6–8</b></span><span><b>Class 9–12</b></span></div>
         </div>
       </article>
 
       <article class="card">
-        <div class="card-media m-fc"><span class="badge badge-alt">All ages</span><span class="card-sym">Fc</span><span class="card-no">06</span></div>
+        <div class="card-media m-fc"><span class="badge">Tournament</span><span class="card-sym">Fc</span><span class="card-no">06</span></div>
         <div class="card-body">
-          <h3 class="card-title">GAMING: FC 26</h3>
-          <p>One bracket, every grade together. Fixtures posted on the morning.</p>
-          <div class="card-stats"><span><b>6–12</b></span></div>
+          <h3 class="card-title">Gaming: FC 26</h3>
+          <p>One bracket, every class together. Fixtures are posted on the morning of the festival.</p>
+          <div class="card-stats"><span><b>All classes</b></span></div>
         </div>
       </article>
     </div>
 
-    <div class="head" style="margin-top:64px">
-      <div>
-        <p class="eyebrow">Pricing</p>
-        <h2 class="h2">ENTER MORE, PAY LESS</h2>
-      </div>
-    </div>
+    <p class="note">Select your class and school on the registration form to see exactly what applies to you.</p>
 
-    <div class="ladder">
-      <div class="rung"><span class="rung-n">01</span><b>One event</b><span class="rung-price">Tk 500</span></div>
-      <div class="rung"><span class="rung-n">02</span><b>Two events</b><span class="rung-price">[X]% off</span></div>
-      <div class="rung is-best"><span class="rung-n">03</span><b>Three or more</b><span class="rung-price">[Y]% off</span></div>
-    </div>
-    <p class="note">Set [X] and [Y] to your final discounts here and on the registration form so the two always agree.</p>
-
-    <button class="btn btn-solid wide" data-goto="register">Register now</button>
+    <button class="btn btn-solid wide" data-goto="register">Register now <span class="arw">→</span></button>
   </div>
 </section>
 
 <!-- ============ REGISTER ============ -->
 <section id="register" class="view" role="tabpanel" hidden>
   <div class="shell block">
-    <p class="eyebrow">Registration <i>/</i> live total</p>
-    <h2 class="h1-alt">SIGN UP</h2>
-    <p class="lede">Pick your grade and school first. You will only be shown the events you are eligible for, and your total updates as you tick boxes.</p>
+    <p class="eyebrow">Registration</p>
+    <h2 class="h1-alt">Sign up</h2>
+    <p class="lede">Pick your class and school first. You will only be shown the events you are eligible for, and everything updates as you make your choices.</p>
 
     <div class="formshell">
       <iframe data-tally-src="https://tally.so/embed/xX5BDr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1333" frameborder="0" marginheight="0" marginwidth="0" title="Event Registration Form"></iframe>
@@ -244,15 +195,15 @@
 <section id="team" class="view" role="tabpanel" hidden>
   <div class="shell block">
     <p class="eyebrow">Organising committee</p>
-    <h2 class="h1-alt">WHO RUNS IT</h2>
+    <h2 class="h1-alt">Who runs it</h2>
     <p class="lede">Swap these placeholders for your real committee before publishing.</p>
 
     <div class="people">
       <article class="person"><div class="face">AB</div><h3>[Name]</h3><p class="role">Festival lead</p><p>Owns the schedule and the day itself.</p></article>
-      <article class="person"><div class="face">CD</div><h3>[Name]</h3><p class="role">Olympiad chair</p><p>Sets and moderates every paper.</p></article>
+      <article class="person"><div class="face">CD</div><h3>[Name]</h3><p class="role">Olympiad chair</p><p>Sets and moderates every olympiad.</p></article>
       <article class="person"><div class="face">EF</div><h3>[Name]</h3><p class="role">Projects and judging</p><p>Recruits judges, runs the display floor.</p></article>
       <article class="person"><div class="face">GH</div><h3>[Name]</h3><p class="role">Gaming bracket</p><p>Fixtures, hardware and the FC 26 schedule.</p></article>
-      <article class="person"><div class="face">IJ</div><h3>[Name]</h3><p class="role">Registration and finance</p><p>Entries, payments and refunds.</p></article>
+      <article class="person"><div class="face">IJ</div><h3>[Name]</h3><p class="role">Registration</p><p>Entries and everything admin.</p></article>
       <article class="person"><div class="face">KL</div><h3>[Name]</h3><p class="role">Outreach</p><p>School liaison, sponsors and socials.</p></article>
     </div>
 
@@ -264,7 +215,7 @@
 <section id="winners" class="view" role="tabpanel" hidden>
   <div class="shell block">
     <p class="eyebrow">Results</p>
-    <h2 class="h1-alt">WINNERS</h2>
+    <h2 class="h1-alt">Winners</h2>
     <p class="lede">Results go up within 48 hours of the festival closing, event by event. Rankings are final once published.</p>
 
     <div class="empty">
@@ -282,7 +233,7 @@
       <div class="row"><span class="rank">02</span><div class="who"><h3>[Runner up]</h3><p class="school">[School]</p></div><span class="medal">Silver</span></div>
       <div class="row"><span class="rank">03</span><div class="who"><h3>[Third]</h3><p class="school">[School]</p></div><span class="medal">Bronze</span></div>
     </div>
-    <p class="note">Copy this board once per event and grade band. Ten result sets in total.</p>
+    <p class="note">Copy this board once per event and class band. Ten result sets in total.</p>
   </div>
 </section>
 
@@ -290,16 +241,16 @@
 <section id="about" class="view" role="tabpanel" hidden>
   <div class="shell block">
     <p class="eyebrow">About</p>
-    <h2 class="h1-alt">COMPETITION, NOT A CAREERS FAIR</h2>
-    <p class="lede">STEM FEST puts students from every participating school into the same room and the same problem sets. Olympiads are written under exam conditions and marked blind. Projects are judged in person at the table you build them on. The gaming bracket runs alongside everything else because a festival should have some noise in it.</p>
+    <h2 class="h1-alt">One day, six ways to win</h2>
+    <p class="lede">STEM FEST is a competition, and it is meant to be a laugh. Students from every participating school in one building, going at the same problems at the same time. Olympiads in the morning, project tables buzzing all day, and an FC 26 bracket running in the corner with a crowd around it. Come for one event, come for several, come with your whole class. Bragging rights are the real prize.</p>
 
     <div class="faq">
-      <details><summary>Can I enter more than one event?</summary><p>Yes, and it costs less per event when you do. Two events get a discount, three or more get a larger one. The registration form works out the total for you.</p></details>
-      <details><summary>My school is not listed.</summary><p>Pick "Other" on the form and type your school name in. Pricing and eligibility work exactly the same way.</p></details>
-      <details><summary>I am in class 7. Can I sit the class 9 paper?</summary><p>No. Each olympiad is written for a grade band, and you will only be shown events your class is eligible for. This keeps the marking fair.</p></details>
-      <details><summary>Is the gaming tournament separate?</summary><p>It runs on the same day and is open to every age group, so all grades share one bracket. It is priced like any other event.</p></details>
+      <details><summary>Can I enter more than one event?</summary><p>Yes. Pick as many as you like on the registration form, as long as the schedules do not clash. The form will show you what your class is eligible for.</p></details>
+      <details><summary>My school is not listed.</summary><p>Pick "Other" on the registration form and type your school name in. Everything else works exactly the same way.</p></details>
+      <details><summary>I am in class 7. Can I enter the class 9 olympiad?</summary><p>No. Each olympiad is written for a class band, and you will only be shown events your class is eligible for. This keeps the marking fair.</p></details>
+      <details><summary>Is the gaming tournament separate?</summary><p>It runs on the same day and is open to every age group, so all classes share one bracket.</p></details>
       <details><summary>What do I need to bring?</summary><p>Your school ID card and your own instruments. Project entrants should bring everything their build needs, including power adaptors.</p></details>
-      <details><summary>How do refunds work?</summary><p>[Add your refund policy here before publishing.]</p></details>
+      <details><summary>Where do I sign up?</summary><p>Everything happens on the Register tab. Pick your class and school and the form guides you from there.</p></details>
     </div>
   </div>
 </section>
@@ -337,6 +288,7 @@
 </nav>
 
 <script src="js/main.js" defer></script>
+
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
 </body>
