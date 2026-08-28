@@ -44,3 +44,6 @@
 .foot .shell{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
 .foot-brand{font-size:34px}
 .foot-legal{grid-column:1/-1;padding-top:32px;border-top:1px solid var(--line)}
+
+/* registration panel: roomier on wide screens */
+.formshell{padding:22px 18px}
